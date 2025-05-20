@@ -1,0 +1,55 @@
+import concurso.*
+import jurado.*
+import participantes.*
+
+describe "Concurso" {
+  method initialize() {
+    concurso.darDeAlta(taylorSwift)
+    concurso.darDeAlta(morat)
+    concurso.darDeAlta(silvioRodriguez)
+    concurso.darDeAlta(badBunny)
+  }
+  
+  test "Inicialmente" {
+    assert.that(beethoven.estaEnojado())
+    assert.equals(6, taylorSwift.calidad())
+    assert.equals(10, taylorSwift.ocupa())
+    
+    assert.equals(8, morat.calidad())
+    assert.equals(20, morat.ocupa())
+    
+    assert.equals(10, silvioRodriguez.calidad())
+    assert.equals(1, silvioRodriguez.ocupa())
+    
+    assert.equals(10, badBunny.calidad())
+    assert.equals(22, badBunny.ocupa())
+    
+    assert
+  }
+  
+  test "Luego de entrenar" {
+    concurso.entrenamiento()
+    assert.equals(7, taylorSwift.calidad())
+    assert.equals(20, taylorSwift.ocupa())
+    
+    assert.equals(6, morat.calidad())
+    assert.equals(16, morat.ocupa())
+    
+    assert.equals(10, silvioRodriguez.calidad())
+    assert.equals(1, silvioRodriguez.ocupa())
+    
+    assert.equals(9, badBunny.calidad())
+    assert.equals(19.8, badBunny.ocupa())
+    
+    assert.equals(taylorSwift, concurso.ganador())
+  }
+  
+  test "Luego de evento especial" {
+    assert.that(beethoven.estaEnojado())
+    concurso.eventoEspecial()
+    assert.equals(22, escesarioActual.superficie())
+    assert.notThat(beethoven.estaEnojado())
+    assert.equals(8, mozart.puntajeMaximo())
+    assert.equals(badBunny, concurso.ganador())
+  }
+}
