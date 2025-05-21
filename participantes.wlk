@@ -14,12 +14,8 @@ object taylorSwift {
   
   method puntaje() = puntaje
   
-  method recibirPuntaje(unaListaDejurados, escesarioActual) {
-    var puntajeTotal = 0
-    unaListaDejurados.forEach(
-      { j => puntajeTotal += j.puntajeDelArtista(self, escesarioActual) }
-    )
-    puntaje = puntajeTotal
+  method recibirPuntaje(unaListaDejurados, escesarioActual) {    
+    puntaje = unaListaDejurados.sum({ j =>  j.puntajeDelArtista(self, escesarioActual)})
   }
   
   method resetearPuntaje() {
@@ -46,12 +42,8 @@ object morat {
   
   method puntaje() = puntaje
   
-  method recibirPuntaje(unaListaDejurados, escesarioActual) {
-    var puntajeTotal = 0
-    unaListaDejurados.forEach(
-      { j => puntajeTotal += j.puntajeDelArtista(self, escesarioActual) }
-    )
-    puntaje = puntajeTotal
+  method recibirPuntaje(unaListaDejurados, escesarioActual) {    
+    puntaje = unaListaDejurados.sum({ j =>  j.puntajeDelArtista(self, escesarioActual)})
   }
   
   method resetearPuntaje() {
@@ -72,12 +64,8 @@ object silvioRodriguez {
   
   method puntaje() = puntaje
   
-  method recibirPuntaje(unaListaDejurados, escesarioActual) {
-    var puntajeTotal = 0
-    unaListaDejurados.forEach(
-      { j => puntajeTotal += j.puntajeDelArtista(self, escesarioActual) }
-    )
-    puntaje = puntajeTotal
+  method recibirPuntaje(unaListaDejurados, escesarioActual) {    
+    puntaje = unaListaDejurados.sum({ j =>  j.puntajeDelArtista(self, escesarioActual)})
   }
   
   method resetearPuntaje() {
@@ -99,12 +87,8 @@ object badBunny {
   
   method puntaje() = puntaje
   
-  method recibirPuntaje(unaListaDejurados, escesarioActual) {
-    var puntajeTotal = 0
-    unaListaDejurados.forEach(
-      { j => puntajeTotal += j.puntajeDelArtista(self, escesarioActual) }
-    )
-    puntaje = puntajeTotal
+  method recibirPuntaje(unaListaDejurados, escesarioActual) {    
+    puntaje = unaListaDejurados.sum({ j =>  j.puntajeDelArtista(self, escesarioActual)})
   }
   
   method resetearPuntaje() {
