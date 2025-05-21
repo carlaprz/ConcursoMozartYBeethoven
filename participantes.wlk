@@ -15,6 +15,10 @@ object taylorSwift {
   method recibirPuntaje(unPuntaje) {
     puntaje += unPuntaje
   }
+  
+  method resetearPuntaje() {
+    puntaje = 0
+  }
 }
 
 object morat {
@@ -39,6 +43,10 @@ object morat {
   method recibirPuntaje(unPuntaje) {
     puntaje += unPuntaje
   }
+  
+  method resetearPuntaje() {
+    puntaje = 0
+  }
 }
 
 object silvioRodriguez {
@@ -56,6 +64,10 @@ object silvioRodriguez {
   
   method recibirPuntaje(unPuntaje) {
     puntaje += unPuntaje
+  }
+  
+  method resetearPuntaje() {
+    puntaje = 0
   }
 }
 
@@ -75,5 +87,9 @@ object badBunny {
   
   method recibirPuntaje(unPuntaje) {
     puntaje += unPuntaje
+  }
+  
+  method resetearPuntaje() {
+    puntaje = 0
   }
 }

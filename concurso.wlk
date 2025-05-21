@@ -37,6 +37,11 @@ object concurso {
     }
   }
   
+  method resetearPuntajes() {
+    asignoPuntaje = false
+    participantes.forEach({ p => p.resetearPuntaje() })
+  }
+  
   method ganador() {
     self.asignarPuntajes()
     return participantes.max({ p => p.puntaje() })
