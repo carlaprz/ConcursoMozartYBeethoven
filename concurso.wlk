@@ -29,11 +29,7 @@ object concurso {
   method asignarPuntajes() {
     if (!asignoPuntaje) {
       asignoPuntaje = true
-      participantes.forEach(
-        { p => jurados.forEach(
-            { j => p.recibirPuntaje(j.puntajeDelArtista(p, escesarioActual)) }
-          ) }
-      )
+      participantes.forEach({ p => p.recibirPuntaje(jurados, escesarioActual) })
     }
   }
   
