@@ -39,9 +39,7 @@ object morat {
     const integrantesARemover = integrantes.filter(
       { integrante => integrante.length() < 5 }
     )
-    integrantesARemover.forEach(
-      { integrante => integrantes.remove(integrante) }
-    )
+    integrantes.removeAll(integrantesARemover)
   }
   
   method puntaje() = puntaje
