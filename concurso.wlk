@@ -2,20 +2,16 @@ import jurado.*
 import participantes.*
 
 object concurso {
-  const jurados = [mozart, beethoven]
-  const participantes = []
+  const jurados = #{mozart, beethoven}
+  const participantes = #{}
   var asignoPuntaje = false
   
   method darDeAlta(unParticipante) {
-    if (!participantes.contains(unParticipante)) participantes.add(
-        unParticipante
-      )
+    participantes.add(unParticipante)
   }
   
   method darDeBaja(unParticipante) {
-    if (!participantes.contains(unParticipante)) participantes.remove(
-        unParticipante
-      )
+    participantes.remove(unParticipante)
   }
   
   method entrenamiento() {
